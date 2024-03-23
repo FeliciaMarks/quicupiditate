@@ -1,0 +1,66 @@
+{
+  "name": "@aurelia/__tests__cjs",
+  "version": "2.0.0-beta.1",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.1.0"
+  },
+  "scripts": {
+    "lint": "eslint --cache --ext .js,.ts .",
+    "lint:ci": "eslint --cache --ext .js,.ts --quiet --report-unused-disable-directives .",
+    "test-262": "node dist/cjs/__tests__/setup-test262.js",
+    "::mocha": "mocha --ui bdd --reporter min --colors --recursive --timeout 5000 --watch-extensions js",
+    "test-node": "npm run ::mocha -- dist/cjs/__tests__/**/*.spec.js",
+    "test-node:aot": "npm run ::mocha -- dist/cjs/__tests__/aot/**/*.spec.js",
+    "test-node:plugin-conventions": "npm run ::mocha -- dist/cjs/__tests__/plugin-conventions/**/*.spec.js",
+    "test-node:plugin-gulp": "npm run ::mocha -- dist/cjs/__tests__/plugin-gulp/**/*.spec.js",
+    "test-node:webpack-loader": "npm run ::mocha -- dist/cjs/__tests__/webpack-loader/**/*.spec.js",
+    "test-node:babel-jest": "npm run ::mocha -- dist/cjs/__tests__/babel-jest/**/*.spec.js",
+    "test-node:ts-jest": "npm run ::mocha -- dist/cjs/__tests__/ts-jest/**/*.spec.js",
+    "test-node:parcel-transformer": "npm run ::mocha -- dist/cjs/__tests__/parcel-transformer/**/*.spec.js",
+    "build": "tsc --build",
+    "dev": "cross-env DEV_MODE=true node esbuild.dev.cjs",
+    "rollup": "npm run build",
+    "verify": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aurelia/aot": "2.0.0-beta.1",
+    "@aurelia/babel-jest": "2.0.0-beta.1",
+    "@aurelia/kernel": "2.0.0-beta.1",
+    "@aurelia/metadata": "2.0.0-beta.1",
+    "@aurelia/platform": "2.0.0-beta.1",
+    "@aurelia/platform-browser": "2.0.0-beta.1",
+    "@aurelia/plugin-conventions": "2.0.0-beta.1",
+    "@aurelia/plugin-gulp": "2.0.0-beta.1",
+    "@aurelia/runtime": "2.0.0-beta.1",
+    "@aurelia/runtime-html": "2.0.0-beta.1",
+    "@aurelia/testing": "2.0.0-beta.1",
+    "@aurelia/ts-jest": "2.0.0-beta.1",
+    "@aurelia/webpack-loader": "2.0.0-beta.1",
+    "@aurelia/parcel-transformer": "2.0.0-beta.1",
+    "@babel/core": "^7.18.2",
+    "@jest/transform": "^28.1.0",
+    "@jest/types": "^28.1.0",
+    "i18next": "^17.0.0",
+    "jsdom": "^19.0.0",
+    "typescript": "4.7.3",
+    "vinyl": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.2.14",
+    "@types/karma": "^6.3.3",
+    "@types/mocha": "10.0.0",
+    "@types/node": "^14.18.14",
+    "@types/vinyl": "^2.0.6",
+    "mocha": "10.0.0",
+    "source-map": "^0.7.3",
+    "ts-node": "10.9.1",
+    "vinyl": "^2.2.0"
+  },
+  "volta": {
+    "node": "16.14.2",
+    "npm": "8.12.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "files": ["./global.d.ts"],
+  "references": [
+    { "path": "__tests__" },
+    { "path": "aurelia" },
+    { "path": "addons" },
+    { "path": "fetch-client" },
+    { "path": "kernel" },
+    { "path": "metadata" },
+    { "path": "platform" },
+    { "path": "platform-browser" },
+    { "path": "router" },
+    // { "path": "router-html" },
+    { "path": "router-lite" },
+    { "path": "route-recognizer" },
+    { "path": "runtime" },
+    { "path": "runtime-html" },
+    { "path": "store-v1" },
+    { "path": "testing" },
+    { "path": "ui-virtualization" },
+    { "path": "validation" },
+    { "path": "validation-html" },
+    { "path": "validation-i18n" }
+  ]
+}
